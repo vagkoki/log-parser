@@ -71,7 +71,7 @@ if st.session_state.df_structured is not None and not st.session_state.df_struct
         st.subheader("📊 Dashboard")
         dashboard_fn = DASHBOARD_MAP.get(log_type)
         if dashboard_fn:
-            dashboard_fn(df_structured)
+            dashboard_fn(st.session_state.df_structured)
         else:
             st.warning("Δεν υπάρχει dashboard για αυτόν τον τύπο log.")
     
